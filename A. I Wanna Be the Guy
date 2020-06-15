@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int n;
+	cin>>n;
+	
+	vector<int> v(n+1);
+	int count =0 ;
+	
+	for(int i=1; i<=2; i++)
+	{
+		int a, b;
+		cin>>a;
+		for(int j =1; j<=a ; j++)
+		{
+			cin>>b;
+			if(v[b] == 0)
+			{
+				v[b] = 1;
+				count++;
+			}
+			
+		}
+		
+	}
+	if(count == n)
+	{
+		cout<<"I become the guy.";
+	}
+	else{
+		cout<<"Oh, my keyboard!";
+	}
+	
+}
+
+int main(){
+	
+	test();
+	return 0;
+
+}
