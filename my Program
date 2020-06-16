@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	
+	int n;
+	cin>>n;
+	char c;
+	vector<int> v(26);
+	for(int i =0 ; i<n; i++)
+    {
+	    cin>>c;
+		if(c < 97)
+		{
+			v[c-65]  =1;
+		}else{
+			v[c - 97] = 1;
+		}
+	
+	}
+	if(n < 26)
+	{
+		cout<<"NO";
+		return;
+	}
+	
+	for(int i=0 ; i<26; i++)
+	{
+		if(v[i] == 0)
+		{
+			cout<<"NO";
+			return;
+		}
+	}
+	cout<<"YES";
+}
+
+int main(){
+	
+	test();
+	return 0;
+
+}
