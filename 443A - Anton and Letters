@@ -1,0 +1,73 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int count=0;
+	char c;
+	vector<int> v(26);
+	while(c != '\n')
+	{
+		c = cin.get();
+		if(c != '{' && c != '}' && c != ',')
+		{
+			if(v[c - 97] == 0)
+			{
+				count++;
+				v[c -97] = 1;
+			}
+		}
+	}
+	cout<<count;
+}
+
+int main(){
+	
+	test();
+	return 0;
+
+}
+
+..............................................................................................
+second solution 
+
+
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	string s;
+	set<char> l;
+	getline(cin, s);
+	
+	int i=0;
+	while(s[i])
+	{
+		if(isalpha(s[i]))
+		{
+			l.insert(s[i]);
+		}
+		i++;
+	}
+	cout<<l.size()<<endl;
+}
+
+int main(){
+	
+	test();
+	return 0;
+
+}
