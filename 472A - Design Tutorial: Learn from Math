@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+bool iscomposite(int n)
+{
+	if(n <= 3) return false;
+	
+	if(n%2 == 0 || n%3 == 0)
+	{
+		return true;
+	}
+	for(int i=5; i*i <= n; i= i+6)
+	{
+		if(n%i == 0 || n%(i+2) == 0) return true;
+	}
+	return false;
+}
+
+void test()
+{
+	
+	int n;
+	cin>>n;
+	
+	for(int i=4; i<=n ; i++)
+	{
+		int a, b;
+		a = i; 
+		b = n - i;
+		if(iscomposite(a) && iscomposite(b))
+		{
+			cout<<a<<" "<<b<<endl;
+			return;
+		}
+	}
+	
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
