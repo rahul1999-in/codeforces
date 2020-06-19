@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int t;
+	cin>>t;
+	
+	while(t--)
+	{
+		int i =0, n, m=1;
+		vector<int> v;
+		cin>>n;
+		while(n > 0){
+			
+			if(n % 10  > 0){
+				v.push_back((n%10)*m);
+			}
+			n /= 10;
+			m *= 10;
+		}
+		cout<<v.size()<<endl;
+		for(auto a : v){
+			cout<<a<<" ";
+		}
+		cout<<endl;
+	}
+	
+	
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
