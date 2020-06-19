@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	vector<lli> v(4);
+	lli max =0;int in=0;
+	for(int i=0; i<4; i++)
+	{
+		cin>>v[i];
+		if(v[i] > max){
+			max = v[i];
+			in = i;
+		}
+	}
+	for(int i=0; i<4; i++)
+	{
+		if(i != in){
+			cout<<max - v[i]<<" ";
+		}
+	}
+	
+	
+	
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
