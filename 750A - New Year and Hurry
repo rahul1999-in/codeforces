@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int n, l;
+	cin>>n>>l;
+	
+	int h = 240;
+	int r = h - l;
+	
+	while(5*n*(n+1)/2 > r){
+		n--;
+	}
+	cout<<n;
+	
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
