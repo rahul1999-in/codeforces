@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int n;
+	cin>>n;
+	vector<int> v(n);
+	int a;
+	int i=0;
+	while(n--)
+	{
+		cin>>a;
+		
+		if(a/2 %2 != 0){
+			cout<<"NO"<<endl;
+		}else{
+			cout<<"YES"<<endl;
+			
+			int v[] = {2, 4, 1, 5};
+			int arr[a];
+			for(int i=0, j = a/2; i<a/2; i++, j++){
+				arr[i++] = v[0];
+				arr[i] = v[1];
+				arr[j++] = v[2];
+				arr[j] = v[3];
+				for(int id=0; id<4; ++id){
+					v[id] += 6;
+				}
+			}
+			
+			for(int i=0; i<a; i++){
+				cout<<arr[i]<<" ";
+			}
+			cout<<endl;
+		}
+	}
+	
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
