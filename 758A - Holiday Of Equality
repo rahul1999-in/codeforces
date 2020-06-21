@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int n, m=0;
+	cin>>n;
+	
+	int arr[n];
+	for(int i=0; i<n; i++){
+		cin>>arr[i];
+		m = max(m, arr[i]);
+	}
+	int count =0;
+	for(int i=0; i<n; i++){
+		count += m - arr[i];
+	}
+	cout<<count<<endl;
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
+
+
+
+
+
