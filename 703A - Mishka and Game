@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+using namespace std;
+
+
+
+void test()
+{
+	int n;
+	cin>>n;
+	
+	int m=0, c=0, t = n,a,b;
+	
+	while(t--){
+		cin>>a>>b;
+		if(a - b >= 1 ) m++;
+		else if(a - b <= -1) c++;
+		
+	}
+	
+	if(m - c >= 1) cout<< "Mishka"<<endl;
+	else if(m  - c == 0) cout<<"Friendship is magic!^^" <<endl;
+	else if(m - c <= -1) cout<<"Chris" <<endl;
+}
+
+int main(){
+	
+	
+	test();
+	
+	return 0;
+
+}
+
+
+
+
+
