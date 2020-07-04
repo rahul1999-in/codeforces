@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+#define lli long long int 
+#define ll long long 
+#define f(i, n) for(int i=0; i<n; i++)
+
+void test()
+{
+   int n,k;
+   cin>>n>>k;
+   int a[n]; 
+   int b[n];
+   
+   for(int i=0; i<n; i++){
+	   cin>>a[i];
+	   
+   }
+   for(int i=0; i<n; i++){
+	   cin>>b[i];
+	   
+   }
+   
+   
+   sort(a, a+n);
+   sort(b, b+n);
+   int r =0;
+   
+   for(int i=0; i<n ; i++){
+	   if(i < k){
+		   r += max(a[i], b[(n-1) - i]); 
+	   }else{
+		   r += a[i];
+	   }
+   }
+   cout<<r<<endl;
+}
+
+int main(){
+	
+	int t;
+	cin>>t;
+	
+	while(t--){
+		test();
+	}
+	
+	
+	
+	
+	return 0;
+
+}
